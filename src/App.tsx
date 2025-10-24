@@ -12,7 +12,6 @@ import BlogProvider from "./components/BlogContext";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import BlogDetails from "./components/BlogDetails";
 import Blogs from "./components/Blogs";
-import React from "react";
 
 export default function App() {
   return (
