@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <section className="masthead">
         <div className="container" id="page-top">
-          <div className="masthead-subheading">Welcome To My Resume</div>
+          <div className="masthead-subheading">Welcome To My Profile</div>
           <div className="masthead-heading text-uppercase">
             It's Nice To Meet You
           </div>
