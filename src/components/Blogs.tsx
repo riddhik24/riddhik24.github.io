@@ -32,7 +32,7 @@ export default function Blogs() {
     <section className="page-section" id="blogs">
       <div className="container mt-4">
         <div className="row">
-          <div className="col-lg-8 col-md-7 mb-4">
+          <div className="col-md-9 mb-4">
             <h2>Blogs</h2>
             <div className="blogsContainer">
               {filteredBlogs?.blogs?.length > 0 ? (
@@ -50,9 +50,8 @@ export default function Blogs() {
               ) : (
                 <p>No blogs found.</p>
               )}
-            </div>
-            <div className="row">
-          <div className="col-lg-3 col-md-5 mb-4">
+              </div>
+          <div className="col-md-3 mb-4 position-realtive">
               <h2 className="mt-4">Tags</h2>
               <div className="blogsContainer">
                 {filteredBlogs?.tags?.length > 0 && (
@@ -69,10 +68,10 @@ export default function Blogs() {
                     ))}
                   </ul>
                 )}
+                </div>
               </div>
-            </div>
           </div>
-          </div></div>
+          </div>
       </div>
     </section>
   );

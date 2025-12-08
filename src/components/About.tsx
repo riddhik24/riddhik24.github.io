@@ -1,11 +1,13 @@
+import profile from "../assets/profile.jpg"
+
 export default function About() {
     return (
         <>
-        <section className="page-section" id="about">
+        <section className="page-section mx-5 my-2" id="about">
         <div className="row align-items-center">
           <div className="col-lg-4 text-center mb-4">
             <img
-              src="./src/assets/profile.jpg"
+              src={profile}
               alt="My Profile"
               className="rounded-circle img-fluid"
             />

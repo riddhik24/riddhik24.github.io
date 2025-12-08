@@ -1,7 +1,3 @@
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Expertise from "./components/Expertise";
 import Home from "./components/Home";
 import About from "./components/About";

@@ -5,7 +5,7 @@ import  { FaReact } from "react-icons/fa";
 export default function Expertise() {
     return (
         <>
-        <section className="page-section" id="services">
+        <section className="page-section mx-5 my-2" id="services">
         <div className="container">
                 <div className="text-center">
                     <h2 className="section-heading text-uppercase">Expertise</h2>

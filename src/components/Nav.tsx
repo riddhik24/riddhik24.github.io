@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-
 export default function Nav() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div className="container">
-        <a className="navbar-brand" href="/home">
-          <img src="assets/img/logo.svg" alt="..." />
-        </a>
+        <Link className="navbar-brand" to={"/home"}>
+          {/* <img src="../assets/img/logo.svg" alt="..." /> */}
+          <h5 className="font-bold">Riddhik Mohite</h5>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
