@@ -1,160 +1,178 @@
 {
-    "blogs": [
-        {
-        "path": "javascript-quick-interview-questions-answers",
-        "title": "Quick interview questions and answers",
-        "shortDesc": "",
-        "tags": "Javascript"
-    },{
-        "path": "event-loop",
-        "title": "What is Event Loop?",
-        "shortDesc": "",
-        "tags": "Javascript"
-    },{
-        "path": "what-is-react",
-        "title": "What is React?",
-        "shortDesc": "",
-        "tags": "React"
-    },{
-        "path": "practical-question-1",
-        "title": "What is true - false",
-        "shortDesc": "",
-        "tags": "Interview-Questions"
-    },{
-        "path": "practical-question-2",
-        "title": "What is false - true",
-        "shortDesc": "",
-        "tags": "Interview-Questions"
-    },{
-        "path": "practical-question-3",
-        "title": "0.1 + 0.2 == 0.3",
-        "shortDesc": "false",
-        "tags": "Interview-Questions"
-    },{
-        "path": "practical-question-4",
-        "title": "why type of null is object? and even after that why null == null returns true?",
-        "shortDesc": "",
-        "tags": "Interview-Questions"
-    },{
-        "path": "type-of-nan",
-        "title": "typeof NaN",
-        "shortDesc": "returns Number",
-        "tags": "Interview-Questions"
-    },{
-        "path": "practical-question-5",
-        "title": "[] == []",
-        "shortDesc": "false as typeof [] is object",
-        "tags": "Interview-Questions"
-    },{
-        "path": "practical-question-6",
-        "title": "{} == {}",
-        "shortDesc": "Throws Syntax error but keeping a = {}; b = {}; a == b will be false as typeof {} is object",
-        "tags": "Interview-Questions"
-    },{
-        "path": "design-pattern-modularization-scalability",
-        "title": "How do you handle large-scale application architecture in JavaScript?",
-        "shortDesc": "Design patterns, modularization, dependency management, and scalability.",
-        "tags": "Interview-Questions"
-    },{
-        "path": "object-freeze-seal",
-        "title": "What is the difference between Object.freeze() and Object.seal()?",
-        "shortDesc": "",
-        "tags": "Interview-Questions"
-    },{
-        "path": "v8-engine",
-        "title": "Explain the role of V8 engine in JavaScript execution.",
-        "shortDesc": "",
-        "tags": "Interview-Questions"
-    },{
-        "path": "reflows-repaints",
-        "title": "How to minimize reflows/repaints?",
-        "shortDesc": "",
-        "tags": "Interview-Questions"
-    },{
-        "path": "javascript-promise-details",
-        "title": "What's the difference between Promise.all, Promise.race, Promise.allSettled, and Promise.any in terms of error handling?",
-        "shortDesc": "",
-        "tags": "Interview-Questions"
-    },{
-        "path": "prototype-chain-resolution",
-        "title": "How does prototype chain resolution work in JavaScript?",
-        "shortDesc": "",
-        "tags": "Interview-Questions"
-    },{
-        "path": "react-event-delegation-internally",
-        "title": "How does React handle event delegation internally?",
-        "shortDesc": "",
-        "tags": "Interview-Questions"
-    },{
-        "path": "proxies-intercept-operation",
-        "title": "What are proxies and how can they be used to intercept operations?",
-        "shortDesc": "",
-        "tags": "Interview-Questions"
-    },{
-        "path": "reflect-api",
-        "title": "What's the use case for Reflect API?",
-        "shortDesc": "",
-        "tags": "Interview-Questions"
-    },{
-        "path": "generator-iterator",
-        "title": "What's Generators and Iterators",
-        "shortDesc": "",
-        "tags": "Interview-Questions"
-    },{
-        "path": "observable-promises",
-        "title": "Explain how RxJS observables differ from Promises.",
-        "shortDesc": "",
-        "tags": "Interview-Questions"
-    },{
-        "path": "security-javascript",
-        "title": "How to add security in javascript",
-        "shortDesc": "",
-        "tags": "Interview-Questions"
-    },{
-        "path": "security-javascript",
-        "title": "Design Patterns in JavaScript",
-        "shortDesc": "How would you implement the Observer, Singleton, or Factory patterns in JavaScript?, What's the difference between Mixin, Decorator, and HOC?",
-        "tags": "Interview-Questions"
-    },{
-        "path": "pub-sub",
-        "title": "Create a tiny event bus system (pub/sub).",
-        "shortDesc": "",
-        "tags": "Interview-Questions"
-    },{
-        "path": "vanilla-js-saftey",
-        "title": "How do you enforce type safety in vanilla JS?",
-        "shortDesc": "",
-        "tags": "Interview-Questions"
-    },{
-        "path": "trade-offs-typescript",
-        "title": "What are the trade-offs of using TypeScript in large-scale projects?",
-        "shortDesc": "",
-        "tags": "Interview-Questions"
-    },{
-        "path": "webpack-vite",
-        "title": "How webpack / vite works",
-        "shortDesc": "",
-        "tags": "Interview-Questions"
-    },{
-        "path": "css-performance",
-        "title": "CSS performance pipeline",
-        "shortDesc": "",
-        "tags": "Interview-Questions"
-    },{
-        "path": "minimize-reflows-repaints",
-        "title": "How to minimize reflows and repaints in the browser?",
-        "shortDesc": "",
-        "tags": "Interview-Questions"
-    },{
-        "path": "will-change",
-        "title": "Why is will-change used, and what are the risks of overusing it?",
-        "shortDesc": "",
-        "tags": "CSS"
-    },{
-        "path": "hardware-acceleration-vs-normal-rendering",
-        "title": "What is the difference between hardware acceleration and normal rendering?",
-        "shortDesc": "",
-        "tags": "CSS"
-    }]
-    
+  "blogs": [
+    {
+      "path": "event-loop",
+      "title": "What is Event Loop?",
+      "shortDesc": "The Event Loop is the mechanism that allows JavaScript to perform non-blocking asynchronous operations despite being single-threaded. It constantly checks the call stack and the callback queue and pushes pending callbacks into the stack once it becomes empty, enabling tasks like setTimeout, promises, and async/await to run efficiently.",
+      "tags": "Javascript"
+    },
+    {
+      "path": "what-is-react",
+      "title": "What is React?",
+      "shortDesc": "React is a JavaScript library for building user interfaces using a component-based architecture. It updates the UI efficiently using a virtual DOM and supports reusable components, declarative programming, and unidirectional data flow, making it ideal for fast and scalable web applications.",
+      "tags": "React"
+    },
+    {
+      "path": "practical-question-1",
+      "title": "What is true - false",
+      "shortDesc": "JavaScript automatically converts values into booleans when required; some values are considered truthy (like [], {}, 'text', numbers except 0) while others are falsy (like 0, '', null, undefined, NaN, false). Understanding these helps avoid unexpected comparison results and bugs.",
+      "tags": "Interview-Questions"
+    },
+    {
+      "path": "practical-question-2",
+      "title": "What is false - true",
+      "shortDesc": "Truthy and falsy evaluation affects conditions and equality comparisons. For example, `!!value` converts values to a boolean form. JavaScript coercion rules automatically convert operands, which explains why unexpected equality results occur during loose comparison (`==`).",
+      "tags": "Interview-Questions"
+    },
+    {
+      "path": "practical-question-3",
+      "title": "0.1 + 0.2 == 0.3",
+      "shortDesc": "Due to floating-point binary representation limitations in IEEE-754 format, values like 0.1 and 0.2 cannot be represented precisely. Their sum becomes 0.30000000000000004 instead of 0.3, so the comparison returns false. Use techniques like `toFixed()` or `Math.round()` to handle precision safely.",
+      "tags": "Interview-Questions"
+    },
+    {
+      "path": "practical-question-4",
+      "title": "why type of null is object? and even after that why null == null returns true?",
+      "shortDesc": "`typeof null` returns 'object' due to a historical bug in the language specification. Despite this, null represents the intentional absence of an object, so comparing null to itself returns true because both are identical primitive values.",
+      "tags": "Interview-Questions"
+    },
+    {
+      "path": "type-of-nan",
+      "title": "typeof NaN",
+      "shortDesc": "NaN stands for Not-a-Number and represents an invalid numeric result. `typeof NaN` returns 'number' because NaN is still classified under the number type. Interestingly, NaN is not equal to itself (`NaN == NaN` is false), requiring `Number.isNaN()` for correct detection.",
+      "tags": "Interview-Questions"
+    },
+    {
+      "path": "practical-question-5",
+      "title": "[] == []",
+      "shortDesc": "Comparing arrays using `==` returns false because arrays are reference-based objects. Even if they contain the same data, both arrays point to different memory locations, so they are not considered equal.",
+      "tags": "Interview-Questions"
+    },
+    {
+      "path": "practical-question-6",
+      "title": "{} == {}",
+      "shortDesc": "Like arrays, objects are compared by reference, not by structure. Two separate object literals never share the same reference, so equality comparison returns false. However, `{}` alone in the console can throw syntax confusion due to interpretation as a block rather than an object literal.",
+      "tags": "Interview-Questions"
+    },
+    {
+      "path": "design-pattern-modularization-scalability",
+      "title": "How do you handle large-scale application architecture in JavaScript?",
+      "shortDesc": "Scaling applications requires modularization using patterns like MVC, MVVM, or micro-frontends; splitting code with ES Modules; dependency management; using services and DI; and optimizing performance with caching, lazy loading, and proper folder structure to ensure maintainability and growth.",
+      "tags": "Interview-Questions"
+    },
+    {
+      "path": "object-freeze-seal",
+      "title": "What is the difference between Object.freeze() and Object.seal()?",
+      "shortDesc": "`Object.freeze()` prevents any modification to an object—no new properties, no deletion, and no value changes. `Object.seal()` prevents adding or removing properties, but existing property values can still be edited. Freeze ensures complete immutability; seal allows controlled updates.",
+      "tags": "Interview-Questions"
+    },
+    {
+      "path": "v8-engine",
+      "title": "Explain the role of V8 engine in JavaScript execution.",
+      "shortDesc": "V8 is Google’s high-performance JavaScript engine that compiles JavaScript directly into native machine code using JIT (Just-In-Time) compilation. It includes an optimizing compiler (TurboFan), garbage collector (Orinoco), and advanced memory management to maximize execution speed.",
+      "tags": "Interview-Questions"
+    },
+    {
+      "path": "reflows-repaints",
+      "title": "How to minimize reflows/repaints?",
+      "shortDesc": "Reflows and repaints affect rendering performance. Minimize layout changes, batch DOM operations, use `requestAnimationFrame()`, apply `will-change` carefully, avoid layout thrashing, and use CSS transforms instead of changing layout properties like width or top.",
+      "tags": "Interview-Questions"
+    },
+    {
+      "path": "javascript-promise-details",
+      "title": "What's the difference between Promise.all, Promise.race, Promise.allSettled, and Promise.any in terms of error handling?",
+      "shortDesc": "`Promise.all()` fails if any promise rejects; `Promise.race()` resolves or rejects with the first settled result; `Promise.allSettled()` waits for all promises and gives results regardless of success or failure; `Promise.any()` resolves with the first fulfilled promise and only rejects if all fail.",
+      "tags": "Interview-Questions"
+    },
+    {
+      "path": "prototype-chain-resolution",
+      "title": "How does prototype chain resolution work in JavaScript?",
+      "shortDesc": "When accessing an object property, JavaScript looks first on the object itself, then on its prototype, and continues upward through the prototype chain until it finds the property or reaches `null`. This mechanism enables inheritance and shared behavior.",
+      "tags": "Interview-Questions"
+    },
+    {
+      "path": "react-event-delegation-internally",
+      "title": "How does React handle event delegation internally?",
+      "shortDesc": "React attaches a single event listener at the root using the synthetic event system. Events bubble up to the root listener, allowing React to manage them efficiently, normalize browser behavior, and improve performance rather than attaching listeners to every component.",
+      "tags": "Interview-Questions"
+    },
+    {
+      "path": "proxies-intercept-operation",
+      "title": "What are proxies and how can they be used to intercept operations?",
+      "shortDesc": "The Proxy API allows intercepting and controlling fundamental operations such as get, set, delete, and function calls. Proxies enable validations, logging, access control, reactivity systems (like Vue), and custom behavior wrapping around objects.",
+      "tags": "Interview-Questions"
+    },
+    {
+      "path": "reflect-api",
+      "title": "What's the use case for Reflect API?",
+      "shortDesc": "Reflect provides a set of utility methods that simplify object manipulation and meta-programming. It works closely with Proxies and ensures predictable, standardized object operations like property access, assignment, and construction.",
+      "tags": "Interview-Questions"
+    },
+    {
+      "path": "generator-iterator",
+      "title": "What's Generators and Iterators",
+      "shortDesc": "Iterators define a controlled way of producing values sequentially. Generators simplify iterator creation using the `function*` syntax and `yield`, allowing pausing and resuming execution, making them useful for streaming, async flow control, and infinite sequences.",
+      "tags": "Interview-Questions"
+    },
+    {
+      "path": "observable-promises",
+      "title": "Explain how RxJS observables differ from Promises.",
+      "shortDesc": "Promises handle a single final value and cannot be canceled, whereas Observables emit multiple values over time, support cancellation, and allow powerful operators for event streaming, real-time data handling, and complex async workflows.",
+      "tags": "Interview-Questions"
+    },
+    {
+      "path": "security-javascript",
+      "title": "How to add security in javascript",
+      "shortDesc": "Securing JavaScript requires validating input, sanitizing user data, preventing XSS and CSRF attacks, using Content-Security-Policy, avoiding eval(), storing secrets on the server, hashing passwords, and following secure coding practices.",
+      "tags": "Interview-Questions"
+    },
+    {
+      "path": "pub-sub",
+      "title": "Create a tiny event bus system (pub/sub).",
+      "shortDesc": "A pub/sub system lets components communicate indirectly via event publishing and subscribing. Publishers broadcast events, and subscribers listen to them without tight coupling. You can implement it using callbacks, maps of event types, and triggering listener functions.",
+      "tags": "Interview-Questions"
+    },
+    {
+      "path": "vanilla-js-saftey",
+      "title": "How do you enforce type safety in vanilla JS?",
+      "shortDesc": "You can achieve type safety using runtime validation, JSDoc annotations, strict mode, schema validators like Joi/Zod, TypeScript tooling, or defensive programming techniques to prevent invalid input and runtime errors.",
+      "tags": "Interview-Questions"
+    },
+    {
+      "path": "trade-offs-typescript",
+      "title": "What are the trade-offs of using TypeScript in large-scale projects?",
+      "shortDesc": "TypeScript improves maintainability, tooling, and safety but adds compilation overhead, a learning curve, extra config, and sometimes slows prototyping. Large teams benefit the most due to reduced bug risk and better predictability.",
+      "tags": "Interview-Questions"
+    },
+    {
+      "path": "webpack-vite",
+      "title": "How webpack / vite works",
+      "shortDesc": "Webpack bundles all assets into files optimized for production with loaders and plugins. Vite uses ES modules in development and bundles only for production, providing faster startup through on-demand compilation and hot-module replacement.",
+      "tags": "Interview-Questions"
+    },
+    {
+      "path": "css-performance",
+      "title": "CSS performance pipeline",
+      "shortDesc": "Browsers parse CSS, compute styles, build render and layout trees, and then paint pixels on the screen. Efficient CSS structure improves rendering speed; heavy selectors, reflows, and repaints slow performance significantly.",
+      "tags": "Interview-Questions"
+    },
+    {
+      "path": "minimize-reflows-repaints",
+      "title": "How to minimize reflows and repaints in the browser?",
+      "shortDesc": "Batch DOM reads and writes, avoid forcing synchronous layout, use transforms and opacity instead of layout changes, minimize complex CSS rules, group animations in layers, and use requestAnimationFrame for smoother rendering.",
+      "tags": "Interview-Questions"
+    },
+    {
+      "path": "will-change",
+      "title": "Why is will-change used, and what are the risks of overusing it?",
+      "shortDesc": "`will-change` tells the browser that an element will likely be animated or changed soon, allowing it to optimize rendering layers. However, overuse wastes memory and can degrade performance instead of improving it.",
+      "tags": "CSS"
+    },
+    {
+      "path": "hardware-acceleration-vs-normal-rendering",
+      "title": "What is the difference between hardware acceleration and normal rendering?",
+      "shortDesc": "Normal rendering uses the CPU for layout and painting, while hardware acceleration uses the GPU for smoother processing of transforms, animations, and 3D effects. It enhances performance but must be used carefully to avoid memory pressure.",
+      "tags": "CSS"
+    }
+  ]
 }

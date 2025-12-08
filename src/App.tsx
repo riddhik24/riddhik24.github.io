@@ -6,10 +6,12 @@ import Contact from "./components/Contact";
 import Nav from "./components/Nav";
 import BlogProvider from "./components/BlogContext";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import BlogDetails from "./components/BlogDetails";
-import Blogs from "./components/Blogs";
+import { lazy } from "react";
 
 export default function App() {
+
+  const Blogs = lazy(()=>import('./components/Blogs'))
+  const BlogDetails = lazy(()=>import('./components/BlogDetails'))
   return (
     <BlogProvider>
       <BrowserRouter>

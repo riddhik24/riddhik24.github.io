@@ -12,33 +12,18 @@ export default function BlogDetails() {
     setFilteredBlog(blogs?.blogs.filter((blog: any) => blog.path == path)?.[0]);
   }, [blogs, path]);
 
-  // useEffect(() => {
-  //   if (filteredBlog?.path) {
-  //     fetch("/blogs.json")
-  //       .then((res) => {
-  //         if (!res.ok) throw new Error("Response was not found");
-  //         return res.text();
-  //       })
-  //       .then((text) => setContent(text))
-  //       .catch((err) => console.error("Error fetching blog content:", err));
-  //   }
-  // }, [filteredBlog]);
-
-
-
   return (
     <>
-      <div className="card mt-4 page-section" id="blogDetails">
-        <div className="card-body">
-          <Link to="/blogs">Back to Blogs</Link>
+      <div className="card m-4 page-section" id="blogDetails">
+        <div className="card-body h-auto blogContentWrapper">
           <h2 className="card-title">{filteredBlog?.title}</h2>
+          <Link to="/blogs">Back to Blogs</Link>
         </div>
-      </div>
-      <div className="card mt-2">
         <div className="card-body">
           <div className="blogContentWrapper">
             {filteredBlog ? (
               <div className="blogContent">
+                <h1 className="my-2">Answer:</h1>
                   <h2>{filteredBlog?.shortDesc}</h2>
                 </div>    
             ) : (
