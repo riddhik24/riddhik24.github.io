@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import Expertise from "./Expertise";
 import About from "./About";
 import Contact from "./Contact";
+import Resume from "../assets/Resume.pdf"
+
 export default function Home() {
   return (
     <>
@@ -16,6 +18,7 @@ export default function Home() {
               Read My Blogs
             </Link>
           </button>
+          <a href={Resume} target="_blank"><h2 className="my-3">Read My Resume</h2></a>
         </div>
       </section>
       <Expertise />

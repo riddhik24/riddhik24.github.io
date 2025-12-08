@@ -1,3 +1,5 @@
+import { FaGithub } from "react-icons/fa";
+
 export default function Footer() {
   return (
     <>
@@ -14,6 +16,14 @@ export default function Footer() {
                 aria-label="LinkedIn"
               >
                 <i className="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                className="btn btn-dark btn-social mx-2"
+                href="https://www.github.com/riddhik24/"
+                aria-label="Github"
+              >
+                {/* <i className="bi bi-github"></i> */}
+                <FaGithub/>
               </a>
             </div>
             <div className="col-lg-4 text-lg-end">
