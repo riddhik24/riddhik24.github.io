@@ -31,12 +31,15 @@ export default function About() {
 
             <h5 className="mt-4">Skills:</h5>
             <ul className="list-inline">
-              <li className="list-inline-item badge bg-primary m-1">Angular</li>
-              <li className="list-inline-item badge bg-primary m-1">React</li>
-              <li className="list-inline-item badge bg-primary m-1">JavaScript/TypeScript</li>
               <li className="list-inline-item badge bg-primary m-1">HTML & CSS</li>
+              <li className="list-inline-item badge bg-primary m-1">JavaScript/TypeScript</li>
+              <li className="list-inline-item badge bg-primary m-1">React.js</li>
+              <li className="list-inline-item badge bg-primary m-1">Angular.js</li>
+              <li className="list-inline-item badge bg-primary m-1">Tailwind CSS</li>
               <li className="list-inline-item badge bg-primary m-1">Bootstrap</li>
-              <li className="list-inline-item badge bg-primary m-1">Firebase</li>
+              <li className="list-inline-item badge bg-primary m-1">Redux</li>
+              <li className="list-inline-item badge bg-primary m-1">Git</li>
+
             </ul>
           </div>
         </div>
