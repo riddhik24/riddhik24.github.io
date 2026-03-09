@@ -45,7 +45,7 @@ export default function Nav() {
         <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}>
           <ul className="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
             <li className="nav-item">
-              <Link className="nav-link" to="/home" onClick={closeMenu}>
+              <Link className="nav-link" to="/" onClick={closeMenu}>
                 Home
               </Link>
             </li>
