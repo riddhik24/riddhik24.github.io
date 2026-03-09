@@ -25,13 +25,12 @@ export default function Contact() {
     e.preventDefault();
 
     const mailto = `mailto:riddhik.work@gmail.com
-        ?subject=New Message from ${form.name}
-        &body=
-        Name: ${form.name}%0D%0A
-        Email: ${form.email}%0D%0A
-        Phone: ${form.phone}%0D%0A
-        Message:%0D%0A${form.message}
-        `;
+?subject=New Message from ${form.name}
+&body=
+Name: ${form.name}%0D%0A
+Email: ${form.email}%0D%0A
+Phone: ${form.phone}%0D%0A
+Message:%0D%0A${form.message}`;
 
         window.location.href = mailto;
 
