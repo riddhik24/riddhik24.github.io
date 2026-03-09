@@ -36,25 +36,30 @@ export default function Blogs() {
             <h2>Blogs</h2>
             <div className="w-100">
               <div className="col-md-3 mb-4 w-100">
-              <h2 className="mt-4 text-center">Tags</h2>
-              <div className="blogsContainer">
-                {filteredBlogs?.tags?.length > 0 && (
-                  <ul className="mt-3 list-group text-center">
-                    {filteredBlogs.tags.map((tag: any, index: number) => (
-                      <li
-                      key={index}
-                      onClick={() => filterByTag(tag)}
-                      className="list-group-item list-group-item-action"
-                      style={{ cursor: "pointer" }}
-                      >
-                        {tag}
-                      </li>
-                    ))}
-                  </ul>
-                )}
+                <h2 className="mt-4 text-center">Tags</h2>
+                <div className="blogsContainer">
+                  {filteredBlogs?.tags?.length > 0 && (
+                    <ul className="mt-3 list-group text-center">
+                      {filteredBlogs.tags.map((tag: any, index: number) => (
+                        <li
+                          key={index}
+                          onClick={() => {
+                            filterByTag(tag);
+                            document
+                              .getElementById("questions")
+                              ?.scrollIntoView({ behavior: "smooth" });
+                          }}
+                          className="list-group-item list-group-item-action"
+                          style={{ cursor: "pointer" }}
+                        >
+                          {tag}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               </div>
-              <h2 className="mt-4 text-center">Questions</h2>
+              <h2 className="mt-4 text-center" id="questions">Questions</h2>
               {filteredBlogs?.blogs?.length > 0 ? (
                 filteredBlogs.blogs.map((blg: any, index: number) => (
                   <div key={index} className="card mt-4">
@@ -70,9 +75,9 @@ export default function Blogs() {
               ) : (
                 <p>No blogs found.</p>
               )}
-              </div>
+            </div>
           </div>
-          </div>
+        </div>
       </div>
     </section>
   );

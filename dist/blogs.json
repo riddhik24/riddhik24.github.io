@@ -173,6 +173,331 @@
       "title": "What is the difference between hardware acceleration and normal rendering?",
       "shortDesc": "Normal rendering uses the CPU for layout and painting, while hardware acceleration uses the GPU for smoother processing of transforms, animations, and 3D effects. It enhances performance but must be used carefully to avoid memory pressure.",
       "tags": "CSS"
-    }
+    },
+
+    {
+      "path": "what-is-nodejs",
+      "title": "What is Node.js and how does it work?",
+      "shortDesc": "Node.js is a JavaScript runtime built on Google's V8 engine that allows developers to run JavaScript outside the browser. It uses an event-driven, non-blocking I/O model which makes it efficient for building scalable network applications such as APIs, real-time systems, and microservices.",
+      "tags": "NodeJS"
+    },
+    {
+      "path": "nodejs-event-driven-architecture",
+      "title": "What is Event Driven Architecture in Node.js?",
+      "shortDesc": "Node.js follows an event-driven architecture where operations emit events and listeners handle them asynchronously. The EventEmitter module allows components to communicate using events, enabling efficient handling of I/O-heavy applications without blocking the main thread.",
+      "tags": "NodeJS"
+    },
+    {
+      "path": "nodejs-streams",
+      "title": "What are Streams in Node.js?",
+      "shortDesc": "Streams are objects that allow reading or writing data continuously instead of loading everything into memory at once. They are useful for handling large files, network communication, and real-time data processing. Examples include readable streams, writable streams, duplex streams, and transform streams.",
+      "tags": "NodeJS"
+    },
+    {
+      "path": "nodejs-cluster",
+      "title": "What is Cluster module in Node.js?",
+      "shortDesc": "The cluster module allows Node.js applications to create multiple worker processes that share the same server port. This helps utilize multiple CPU cores, improving performance and scalability for high-traffic applications.",
+      "tags": "NodeJS"
+    },
+    {
+      "path": "nodejs-process-nexttick-vs-setimmediate",
+      "title": "process.nextTick() vs setImmediate()",
+      "shortDesc": "Both functions schedule asynchronous execution but behave differently in the event loop. process.nextTick() runs immediately after the current operation before the event loop continues, while setImmediate() runs during the check phase after I/O callbacks.",
+      "tags": "NodeJS"
+    },
+    {
+      "path": "what-is-expressjs",
+      "title": "What is Express.js?",
+      "shortDesc": "Express.js is a minimal and flexible web framework built on top of Node.js. It simplifies server creation, routing, middleware management, and API development, making it one of the most widely used frameworks for building backend services and RESTful APIs.",
+      "tags": "Express"
+    },
+    {
+      "path": "express-middleware",
+      "title": "What is Middleware in Express?",
+      "shortDesc": "Middleware functions are functions that execute during the request-response cycle in Express. They can modify the request or response objects, execute code, end the request-response cycle, or pass control to the next middleware using the next() function.",
+      "tags": "Express"
+    },
+    {
+      "path": "express-routing",
+      "title": "How does Routing work in Express?",
+      "shortDesc": "Routing in Express defines how an application responds to client requests at specific endpoints. Routes are defined using HTTP methods like GET, POST, PUT, and DELETE, allowing developers to organize API endpoints and handle different types of requests efficiently.",
+      "tags": "Express"
+    },
+    {
+      "path": "express-error-handling",
+      "title": "Error Handling in Express",
+      "shortDesc": "Express handles errors using special middleware functions with four parameters: err, req, res, and next. These middleware functions capture errors from routes or other middleware and allow centralized error management for logging, formatting responses, and preventing crashes.",
+      "tags": "Express"
+    },
+    {
+      "path": "rest-api-best-practices",
+      "title": "REST API Best Practices",
+      "shortDesc": "Designing a good REST API involves using proper HTTP methods, meaningful endpoint naming, status codes, authentication mechanisms, pagination, versioning, and structured responses. Following REST principles ensures scalability and maintainability of backend services.",
+      "tags": "Backend"
+    },
+    {
+      "path": "what-is-postgresql",
+      "title": "What is PostgreSQL?",
+      "shortDesc": "PostgreSQL is a powerful open-source relational database known for reliability, advanced features, and SQL standards compliance. It supports complex queries, indexing, transactions, JSON data types, and extensions, making it suitable for large-scale and high-performance applications.",
+      "tags": "PostgreSQL"
+    },
+    {
+      "path": "postgresql-indexes",
+      "title": "What are Indexes in PostgreSQL?",
+      "shortDesc": "Indexes improve query performance by allowing the database to locate rows faster instead of scanning the entire table. PostgreSQL supports different types of indexes such as B-tree, Hash, GiST, and GIN, each optimized for specific query patterns.",
+      "tags": "PostgreSQL"
+    },
+    {
+      "path": "postgresql-transactions",
+      "title": "What are Transactions in PostgreSQL?",
+      "shortDesc": "Transactions ensure that a group of database operations execute reliably using the ACID properties: Atomicity, Consistency, Isolation, and Durability. They guarantee that either all operations succeed or none are applied, maintaining data integrity.",
+      "tags": "PostgreSQL"
+    },
+    {
+      "path": "postgresql-joins",
+      "title": "Types of Joins in PostgreSQL",
+      "shortDesc": "Joins combine rows from multiple tables based on related columns. Common types include INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL JOIN, each used to retrieve relational data in different ways depending on the required result set.",
+      "tags": "PostgreSQL"
+    },
+    {
+      "path": "postgresql-normalization",
+      "title": "What is Database Normalization?",
+      "shortDesc": "Normalization is the process of structuring a database to reduce redundancy and improve data integrity. It involves dividing tables into smaller related tables and defining relationships using primary and foreign keys.",
+      "tags": "PostgreSQL"
+    },
+    {
+      "path": "nodejs-event-loop-deep-dive",
+      "title": "Node.js Event Loop Deep Dive",
+      "shortDesc": "The Node.js event loop is responsible for handling asynchronous operations in a single-threaded environment. It works through different phases such as timers, pending callbacks, idle/prepare, poll, check, and close callbacks. Understanding these phases helps developers write more efficient and non-blocking applications.",
+      "tags": "NodeJS"
+    },
+    {
+      "path": "worker-threads-vs-cluster",
+      "title": "Worker Threads vs Cluster in Node.js",
+      "shortDesc": "Node.js provides worker threads and cluster modules to utilize multiple CPU cores. Worker threads run JavaScript in parallel threads sharing memory, while the cluster module creates multiple processes that share the same server port, making them suitable for different performance optimization scenarios.",
+      "tags": "NodeJS"
+    },
+    {
+      "path": "nodejs-memory-management",
+      "title": "Memory Management in Node.js",
+      "shortDesc": "Node.js manages memory through the V8 engine using a garbage collection system. It allocates memory for objects in the heap and automatically frees unused memory. Understanding memory leaks, heap size, and garbage collection behavior is crucial for building high-performance applications.",
+      "tags": "NodeJS"
+    },
+    {
+      "path": "nodejs-rate-limiting",
+      "title": "Rate Limiting in Node.js APIs",
+      "shortDesc": "Rate limiting restricts how many requests a client can make within a specified time frame. It helps prevent abuse, DDoS attacks, and server overload. Libraries like express-rate-limit allow developers to implement rate limiting easily in Node.js APIs.",
+      "tags": "NodeJS"
+    },
+    {
+      "path": "nodejs-caching-strategies",
+      "title": "Caching Strategies in Node.js",
+      "shortDesc": "Caching improves performance by storing frequently accessed data temporarily. Node.js applications can use in-memory caching, Redis caching, or HTTP caching headers to reduce database queries and speed up API responses.",
+      "tags": "NodeJS"
+    },
+    {
+      "path": "express-authentication-jwt",
+      "title": "Authentication using JWT in Express",
+      "shortDesc": "JWT authentication allows secure user authentication without maintaining server-side sessions. After login, the server generates a signed token that the client includes in future requests. Middleware verifies the token to authorize access to protected routes.",
+      "tags": "Express"
+    },
+    {
+      "path": "express-security-best-practices",
+      "title": "Express Security Best Practices",
+      "shortDesc": "Securing Express applications involves using Helmet for HTTP security headers, input validation, rate limiting, HTTPS enforcement, CORS configuration, and protecting against common attacks like XSS, CSRF, and SQL injection.",
+      "tags": "Express"
+    },
+    {
+      "path": "express-mvc-architecture",
+      "title": "MVC Architecture in Express Applications",
+      "shortDesc": "MVC stands for Model-View-Controller and is used to structure backend applications. Models manage data, controllers handle business logic, and routes connect requests to controllers. This separation improves maintainability and scalability.",
+      "tags": "Express"
+    },
+    {
+      "path": "express-request-lifecycle",
+      "title": "Express Request Lifecycle",
+      "shortDesc": "When a request reaches an Express server, it passes through middleware, route handlers, and response processing stages. Understanding this lifecycle helps developers manage authentication, validation, logging, and error handling effectively.",
+      "tags": "Express"
+    },
+    {
+      "path": "express-file-upload",
+      "title": "Handling File Uploads in Express",
+      "shortDesc": "File uploads in Express are typically handled using middleware like Multer. It parses multipart/form-data requests and allows storing uploaded files locally or in cloud storage services like AWS S3.",
+      "tags": "Express"
+    },
+    {
+      "path": "postgresql-query-optimization",
+      "title": "PostgreSQL Query Optimization Techniques",
+      "shortDesc": "Optimizing PostgreSQL queries involves proper indexing, avoiding unnecessary joins, analyzing execution plans with EXPLAIN, and reducing full-table scans. These techniques significantly improve database performance for large datasets.",
+      "tags": "PostgreSQL"
+    },
+    {
+      "path": "postgresql-json-support",
+      "title": "Using JSON and JSONB in PostgreSQL",
+      "shortDesc": "PostgreSQL supports JSON and JSONB data types that allow storing semi-structured data inside relational tables. JSONB provides better indexing and faster querying, making it useful for flexible schemas and modern applications.",
+      "tags": "PostgreSQL"
+    },
+    {
+      "path": "postgresql-index-types",
+      "title": "Different Types of Indexes in PostgreSQL",
+      "shortDesc": "PostgreSQL supports multiple index types including B-tree, Hash, GIN, GiST, and BRIN. Each index type is optimized for specific queries such as text search, range queries, or large datasets.",
+      "tags": "PostgreSQL"
+    },
+    {
+      "path": "postgresql-connection-pooling",
+      "title": "Connection Pooling in PostgreSQL",
+      "shortDesc": "Connection pooling improves database performance by reusing existing connections instead of creating new ones for every request. Tools like pg-pool or PgBouncer manage connection pools efficiently in production environments.",
+      "tags": "PostgreSQL"
+    },
+    {
+      "path": "postgresql-locking-mechanism",
+      "title": "Locking Mechanisms in PostgreSQL",
+      "shortDesc": "PostgreSQL uses row-level and table-level locks to maintain data consistency during concurrent transactions. Understanding locking behavior helps avoid deadlocks and improves database reliability.",
+      "tags": "PostgreSQL"
+    },
+    {
+      "path": "database-migrations",
+      "title": "Database Migrations Explained",
+      "shortDesc": "Database migrations allow developers to version-control database schema changes over time. Tools like Sequelize, Knex, or Prisma migrations ensure that schema updates are consistent across development, staging, and production environments.",
+      "tags": "Backend"
+    },
+    {
+      "path": "api-versioning-strategies",
+      "title": "API Versioning Strategies",
+      "shortDesc": "API versioning ensures backward compatibility when updating APIs. Common strategies include URL versioning, header versioning, and query parameter versioning, allowing developers to evolve APIs without breaking existing clients.",
+      "tags": "Backend"
+    },
+    {
+      "path": "microservices-vs-monolith",
+      "title": "Microservices vs Monolithic Architecture",
+      "shortDesc": "Monolithic architecture builds the application as a single codebase, while microservices break functionality into independent services. Each approach has advantages depending on scalability, team size, and system complexity.",
+      "tags": "Backend"
+    },
+    {
+      "path": "api-pagination-techniques",
+      "title": "API Pagination Techniques",
+      "shortDesc": "Pagination improves API performance by limiting how many records are returned per request. Common approaches include offset pagination, cursor-based pagination, and keyset pagination, each suited for different types of data retrieval.",
+      "tags": "Backend"
+    },
+    {
+      "path": "api-logging-monitoring",
+      "title": "Logging and Monitoring Backend APIs",
+      "shortDesc": "Monitoring APIs involves logging requests, tracking errors, and measuring performance metrics. Tools like Winston, Morgan, Prometheus, and Grafana help maintain reliability and quickly detect issues in production systems.",
+      "tags": "Backend"
+    },
+     {
+    "path": "javascript-closures",
+    "title": "What are Closures in JavaScript?",
+    "shortDesc": "A closure is created when a function remembers variables from its outer scope even after the outer function has finished executing. Closures allow functions to maintain private state and are commonly used for data encapsulation, callbacks, and functional programming patterns.",
+    "tags": "Javascript"
+  },
+  {
+    "path": "javascript-hoisting",
+    "title": "What is Hoisting in JavaScript?",
+    "shortDesc": "Hoisting is JavaScript's default behavior of moving declarations to the top of the current scope before execution. Variables declared with var are hoisted with undefined values, while let and const are hoisted but remain in the temporal dead zone until initialization.",
+    "tags": "Javascript"
+  },
+  {
+    "path": "javascript-call-apply-bind",
+    "title": "call vs apply vs bind in JavaScript",
+    "shortDesc": "call, apply, and bind are methods used to control the value of 'this' when invoking functions. call invokes a function immediately with arguments passed individually, apply accepts arguments as an array, and bind returns a new function with 'this' permanently bound.",
+    "tags": "Javascript"
+  },
+  {
+    "path": "javascript-debounce-vs-throttle",
+    "title": "Debounce vs Throttle in JavaScript",
+    "shortDesc": "Debouncing delays function execution until a certain time has passed since the last event, while throttling limits the function execution to once within a specified interval. These techniques improve performance when handling frequent events like scrolling or typing.",
+    "tags": "Javascript"
+  },
+  {
+    "path": "javascript-deep-vs-shallow-copy",
+    "title": "Deep Copy vs Shallow Copy in JavaScript",
+    "shortDesc": "A shallow copy duplicates only the first level of an object while nested objects remain referenced. A deep copy duplicates all nested objects as well, ensuring complete independence between the copied and original objects.",
+    "tags": "Javascript"
+  },
+  {
+    "path": "react-virtual-dom",
+    "title": "What is Virtual DOM in React?",
+    "shortDesc": "The Virtual DOM is a lightweight in-memory representation of the real DOM. React updates the virtual DOM first, compares it with the previous version using a diffing algorithm, and then updates only the changed parts of the actual DOM, improving performance.",
+    "tags": "React"
+  },
+  {
+    "path": "react-hooks",
+    "title": "What are React Hooks?",
+    "shortDesc": "Hooks are functions introduced in React that allow functional components to use state and lifecycle features without writing class components. Examples include useState, useEffect, useContext, and useReducer which simplify component logic and improve code reusability.",
+    "tags": "React"
+  },
+  {
+    "path": "react-useeffect-explained",
+    "title": "How does useEffect work in React?",
+    "shortDesc": "useEffect is a React hook used to perform side effects in functional components such as API calls, subscriptions, or DOM updates. It runs after the component renders and can optionally depend on specific variables using the dependency array.",
+    "tags": "React"
+  },
+  {
+    "path": "react-controlled-vs-uncontrolled",
+    "title": "Controlled vs Uncontrolled Components in React",
+    "shortDesc": "Controlled components rely on React state to manage form input values, while uncontrolled components store form data directly in the DOM using refs. Controlled components provide better control and validation, making them preferred in most React applications.",
+    "tags": "React"
+  },
+  {
+    "path": "react-memoization",
+    "title": "React Memoization (React.memo, useMemo, useCallback)",
+    "shortDesc": "Memoization in React helps avoid unnecessary re-renders by caching computed values or components. React.memo prevents component re-renders when props haven't changed, while useMemo and useCallback cache values and functions respectively.",
+    "tags": "React"
+  },
+  {
+    "path": "html-semantic-elements",
+    "title": "What are Semantic HTML Elements?",
+    "shortDesc": "Semantic HTML elements clearly describe their meaning to both developers and browsers. Tags like header, footer, article, section, and nav improve accessibility, SEO, and maintainability by giving structure and meaning to the content.",
+    "tags": "HTML"
+  },
+  {
+    "path": "html-localstorage-sessionstorage",
+    "title": "LocalStorage vs SessionStorage",
+    "shortDesc": "LocalStorage and SessionStorage are Web Storage APIs used to store key-value data in the browser. LocalStorage persists data even after the browser is closed, while SessionStorage stores data only for the duration of the current browser session.",
+    "tags": "HTML"
+  },
+  {
+    "path": "html-defer-vs-async",
+    "title": "async vs defer in script tags",
+    "shortDesc": "The async and defer attributes control how JavaScript files load in HTML. async loads scripts asynchronously and executes immediately when ready, while defer loads scripts in the background but executes them only after the HTML document is fully parsed.",
+    "tags": "HTML"
+  },
+  {
+    "path": "css-flexbox",
+    "title": "What is Flexbox in CSS?",
+    "shortDesc": "Flexbox is a layout module that provides an efficient way to align and distribute space among items in a container. It allows flexible positioning, alignment, and ordering of elements using properties like justify-content, align-items, and flex-direction.",
+    "tags": "CSS"
+  },
+  {
+    "path": "css-grid",
+    "title": "What is CSS Grid?",
+    "shortDesc": "CSS Grid is a two-dimensional layout system that allows developers to create complex layouts using rows and columns. It provides precise control over placement of elements using grid-template-rows, grid-template-columns, and grid-area properties.",
+    "tags": "CSS"
+  },
+  {
+    "path": "css-specificity",
+    "title": "What is CSS Specificity?",
+    "shortDesc": "CSS specificity determines which CSS rule is applied when multiple rules target the same element. It is calculated based on selector types such as inline styles, IDs, classes, attributes, and element selectors.",
+    "tags": "CSS"
+  },
+  {
+    "path": "tailwind-utility-first",
+    "title": "What is Utility-First CSS in Tailwind?",
+    "shortDesc": "Tailwind CSS follows a utility-first approach where small, single-purpose classes are used directly in HTML to style elements. This eliminates the need for writing custom CSS and enables faster UI development with consistent design patterns.",
+    "tags": "TailwindCSS"
+  },
+  {
+    "path": "tailwind-responsive-design",
+    "title": "Responsive Design in Tailwind CSS",
+    "shortDesc": "Tailwind CSS provides built-in responsive design utilities using breakpoint prefixes such as sm, md, lg, and xl. These utilities allow developers to apply different styles at different screen sizes without writing custom media queries.",
+    "tags": "TailwindCSS"
+  },
+  {
+    "path": "tailwind-customization",
+    "title": "How to Customize Tailwind CSS?",
+    "shortDesc": "Tailwind can be customized using the tailwind.config.js file where developers can extend colors, spacing, typography, breakpoints, and plugins. This allows teams to maintain a consistent design system across large applications.",
+    "tags": "TailwindCSS"
+  }
   ]
 }

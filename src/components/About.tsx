@@ -35,6 +35,9 @@ export default function About() {
               <li className="list-inline-item badge bg-primary m-1">JavaScript/TypeScript</li>
               <li className="list-inline-item badge bg-primary m-1">React.js</li>
               <li className="list-inline-item badge bg-primary m-1">Angular.js</li>
+              <li className="list-inline-item badge bg-primary m-1">Node.js</li>
+              <li className="list-inline-item badge bg-primary m-1">Express.js</li>
+              <li className="list-inline-item badge bg-primary m-1">PostgreSQL</li><br/>
               <li className="list-inline-item badge bg-primary m-1">Tailwind CSS</li>
               <li className="list-inline-item badge bg-primary m-1">Bootstrap</li>
               <li className="list-inline-item badge bg-primary m-1">Redux</li>

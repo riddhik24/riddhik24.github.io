@@ -6,6 +6,10 @@ import { SiJavascript } from "react-icons/si";
 import { FaBootstrap } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 import { SiGit } from "react-icons/si";
+import { SiExpress } from "react-icons/si";
+import { FaNodeJs } from "react-icons/fa";
+import { SiPostgresql } from "react-icons/si";
+import { DiDocker } from "react-icons/di";
 
 export default function Expertise() {
     return (
@@ -14,7 +18,7 @@ export default function Expertise() {
         <div className="container">
                 <div className="text-center">
                     <h2 className="section-heading text-uppercase">Expertise</h2>
-                    <h3 className="section-subheading text-muted">Jr. Web Developer</h3>
+                    <h3 className="section-subheading text-muted">Jr. Full Stack Developer</h3>
                 </div>
                 <div className="row w-100 text-center">
                     <div className="col-md-3">
@@ -36,6 +40,27 @@ export default function Expertise() {
                         <SiAngular size={120}/>
                         <h4 className="my-3">Angular</h4>
                         <p className="text-muted">Passionate Angular developer creating dynamic, responsive, and user-friendly web applications.</p>
+                    </div>
+                    
+                    <div className="col-md-3">
+                        <FaNodeJs size={125} />
+                        <h4 className="my-3">Node.js</h4>
+                        <p className="text-muted">Building scalable and efficient server-side applications using Node.js, enabling fast and non-blocking backend services.</p>
+                    </div>
+                    <div className="col-md-3">
+                        <SiExpress size={125} />
+                        <h4 className="my-3">Express.js</h4>
+                        <p className="text-muted">Developing RESTful APIs and backend services using Express.js, ensuring structured routing, middleware management, and efficient server logic.</p>
+                    </div>
+                    <div className="col-md-3">
+                        <SiPostgresql size={125} />
+                        <h4 className="my-3">PostgreSQL</h4>
+                        <p className="text-muted">Designing and managing relational databases using PostgreSQL, handling complex queries, structured data, and reliable data storage.</p>
+                    </div>
+                    <div className="col-md-3">
+                        <DiDocker size={125} />
+                        <h4 className="my-3">Docker</h4>
+                        <p className="text-muted">Containerizing applications using Docker to ensure consistent development, testing, and deployment environments across different systems.</p>
                     </div>
                     <div className="col-md-3">
                         <SiTailwindcss size={120}/>
