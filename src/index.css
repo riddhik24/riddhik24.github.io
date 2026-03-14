@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+/* ============================================
+   CLASS-BASED DARK MODE
+   ============================================ */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ============================================
+   CUSTOM THEME TOKENS
+   ============================================ */
+@theme {
+  /* Accent colors */
+  --color-accent: #00d4aa;
+  --color-accent-light: #33e0be;
+  --color-accent-dark: #00a888;
+  --color-accent-purple: #7b61ff;
+
+  /* Dark palette */
+  --color-dark-bg: #0a0a0f;
+  --color-dark-surface: #12121a;
+  --color-dark-elevated: #1a1a2e;
+  --color-dark-glass: rgba(255, 255, 255, 0.04);
+  --color-dark-glass-border: rgba(255, 255, 255, 0.08);
+  --color-dark-text: #f0f0f5;
+  --color-dark-text-secondary: #8a8a9a;
+  --color-dark-text-muted: #5a5a6a;
+
+  /* Light palette */
+  --color-light-bg: #f8f9fc;
+  --color-light-surface: #ffffff;
+  --color-light-elevated: #f0f1f5;
+  --color-light-glass: rgba(0, 0, 0, 0.02);
+  --color-light-glass-border: rgba(0, 0, 0, 0.08);
+  --color-light-text: #1a1a2e;
+  --color-light-text-secondary: #4a4a5a;
+  --color-light-text-muted: #8a8a9a;
+
+  /* Fonts */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Animations */
+  --animate-fade-in-up: fade-in-up 0.7s ease-out both;
+  --animate-fade-in: fade-in 0.6s ease-out both;
+  --animate-gradient: gradient-shift 12s ease infinite;
+  --animate-float: float 8s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 3s ease-in-out infinite;
+  --animate-spin-slow: spin 0.8s linear infinite;
+}
+
+/* ============================================
+   KEYFRAMES
+   ============================================ */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(0, 212, 170, 0.2); }
+  50% { box-shadow: 0 0 40px rgba(0, 212, 170, 0.4); }
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    font-family: var(--font-body);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-dark-bg);
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+
+  .dark ::-webkit-scrollbar-track { background: var(--color-dark-bg); }
+  .dark ::-webkit-scrollbar-thumb { background: var(--color-dark-elevated); border-radius: 4px; }
+  .dark ::-webkit-scrollbar-thumb:hover { background: var(--color-accent-dark); }
+
+  ::-webkit-scrollbar-thumb { background: #d0d0d0; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--color-accent); }
+}
+
+/* ============================================
+   ANIMATION DELAYS (utilities)
+   ============================================ */
+@utility delay-1 { animation-delay: 0.1s; }
+@utility delay-2 { animation-delay: 0.2s; }
+@utility delay-3 { animation-delay: 0.3s; }
+@utility delay-4 { animation-delay: 0.4s; }
+@utility delay-5 { animation-delay: 0.5s; }
+@utility delay-6 { animation-delay: 0.6s; }
+
+/* ============================================
+   GRADIENT TEXT UTILITY
+   ============================================ */
+@utility gradient-text {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@utility gradient-text-hero {
+  background: linear-gradient(135deg, var(--color-dark-text) 0%, var(--color-accent) 50%, var(--color-accent-purple) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================
+   GLASS CARD UTILITY
+   ============================================ */
+@utility glass-card {
+  background: var(--color-dark-glass);
+  border: 1px solid var(--color-dark-glass-border);
+  border-radius: 20px;
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@utility glass-card-light {
+  background: var(--color-light-surface);
+  border: 1px solid var(--color-light-glass-border);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
