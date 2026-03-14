@@ -29,12 +29,12 @@ const skills = [
 export default function Expertise() {
   return (
     <section
-      className="py-20 md:py-28 border-t border-light-glass-border dark:border-dark-glass-border
+      className="py-16 sm:py-20 md:py-28 border-t border-light-glass-border dark:border-dark-glass-border
         bg-light-bg dark:bg-dark-bg"
     >
-      <div className="container mx-auto px-4 md:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-heading font-extrabold uppercase text-light-text dark:text-dark-text mb-2 animate-fade-in-up">
+      <div className="container mx-auto px-5 sm:px-6 md:px-8">
+        <div className="text-center mb-10 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-extrabold uppercase text-light-text dark:!text-white mb-2 animate-fade-in-up">
             Expertise
           </h2>
           <p className="text-light-text-secondary dark:text-dark-text-secondary italic font-body animate-fade-in-up delay-1">
@@ -42,11 +42,11 @@ export default function Expertise() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
           {skills.map((skill, index) => (
             <div
               key={skill.name}
-              className={`group p-6 text-center rounded-2xl cursor-default relative overflow-hidden
+              className={`group p-5 sm:p-6 text-center rounded-2xl cursor-default relative overflow-hidden
                 animate-fade-in-up delay-${(index % 6) + 1}
                 bg-light-surface dark:bg-dark-glass
                 border border-light-glass-border dark:border-dark-glass-border
@@ -56,11 +56,11 @@ export default function Expertise() {
                 transition-all duration-500`}
             >
               <skill.Icon
-                size={48}
+                size={40}
                 style={{ color: skill.color }}
-                className="mx-auto mb-4 transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_12px_rgba(0,212,170,0.4)]"
+                className="mx-auto mb-3 sm:mb-4 transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_12px_rgba(0,212,170,0.4)]"
               />
-              <h4 className="font-heading font-bold text-sm md:text-base text-light-text dark:text-dark-text mb-2">
+              <h4 className="font-heading font-bold text-sm md:text-base text-light-text dark:!text-white mb-1 sm:mb-2">
                 {skill.name}
               </h4>
               <p className="text-light-text-secondary dark:text-dark-text-secondary text-xs md:text-sm leading-relaxed mb-0">

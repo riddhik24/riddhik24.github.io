@@ -14,6 +14,11 @@ export default function Nav() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Close menu on route change
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
+
   const closeMenu = () => setIsOpen(false);
   const isActive = (path: string) => location.pathname === path;
 
@@ -23,13 +28,13 @@ export default function Nav() {
         backdrop-blur-xl border-b
         ${isShrunk
           ? "py-2 bg-white/90 dark:bg-dark-bg/95 shadow-lg border-black/5 dark:border-white/5"
-          : "py-4 bg-white/80 dark:bg-dark-bg/85 border-transparent"
+          : "py-3 sm:py-4 bg-white/80 dark:bg-dark-bg/85 border-transparent"
         }`}
     >
-      <div className="container mx-auto px-4 flex items-center justify-between">
+      <div className="container mx-auto px-4 sm:px-6 flex items-center justify-between">
         {/* Brand */}
         <Link
-          className="font-heading font-extrabold text-xl gradient-text no-underline"
+          className="font-heading font-extrabold text-lg sm:text-xl text-accent"
           to="/"
           onClick={closeMenu}
         >
@@ -49,15 +54,15 @@ export default function Nav() {
               key={item.path}
               to={item.path}
               onClick={closeMenu}
-              className={`relative px-4 py-2 rounded-lg text-xs font-heading font-semibold uppercase tracking-wider no-underline transition-all duration-200
+              className={`relative px-4 py-2 rounded-lg text-xs font-heading font-semibold uppercase tracking-wider transition-all duration-200
                 ${isActive(item.path)
-                  ? "text-accent bg-accent/10"
-                  : "text-light-text-secondary dark:text-dark-text-secondary hover:text-accent hover:bg-accent/5"
+                  ? "!text-accent bg-accent/10"
+                  : "!text-light-text-secondary dark:!text-dark-text-secondary hover:!text-accent hover:bg-accent/5"
                 }`}
             >
               {item.label}
               {isActive(item.path) && (
-                <span className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-5 h-0.5 bg-gradient-to-r from-accent to-accent-purple rounded-full" />
+                <span className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-5 h-0.5 bg-accent rounded-full" />
               )}
             </Link>
           ))}
@@ -81,13 +86,14 @@ export default function Nav() {
         </div>
 
         {/* Mobile: toggle + menu button */}
-        <div className="lg:hidden flex items-center gap-3">
+        <div className="lg:hidden flex items-center gap-2">
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-lg border transition-all cursor-pointer
+            className="p-2.5 rounded-lg border transition-all cursor-pointer
               bg-light-glass dark:bg-dark-glass
               border-light-glass-border dark:border-dark-glass-border
-              text-light-text dark:text-dark-text"
+              text-light-text dark:text-dark-text
+              active:scale-95"
             aria-label="Toggle theme"
           >
             {theme === "dark" ? (
@@ -98,44 +104,51 @@ export default function Nav() {
           </button>
 
           <button
-            className="px-3 py-2 rounded-lg border font-heading text-xs font-bold uppercase tracking-wider transition-all cursor-pointer
+            className="px-3 py-2.5 rounded-lg border font-heading text-xs font-bold uppercase tracking-wider transition-all cursor-pointer
               text-light-text dark:text-dark-text
               border-light-glass-border dark:border-dark-glass-border
-              hover:border-accent hover:bg-accent/5"
+              hover:border-accent hover:bg-accent/5
+              active:scale-95"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle navigation menu"
           >
-            Menu <i className="fas fa-bars ms-1" />
+            <span className="inline-flex items-center gap-1">
+              {isOpen ? "Close" : "Menu"}
+              <i className={`fas ${isOpen ? "fa-times" : "fa-bars"} text-sm`} />
+            </span>
           </button>
         </div>
       </div>
 
       {/* Mobile dropdown */}
-      {isOpen && (
-        <div className="lg:hidden border-t border-light-glass-border dark:border-dark-glass-border bg-light-surface/95 dark:bg-dark-bg/95 backdrop-blur-xl">
-          <div className="container mx-auto px-4 py-4 flex flex-col gap-1">
-            {[
-              { path: "/", label: "Home" },
-              { path: "/expertise", label: "Expertise" },
-              { path: "/about", label: "About" },
-              { path: "/blogs", label: "Blogs" },
-              { path: "/contact", label: "Contact" },
-            ].map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                onClick={closeMenu}
-                className={`px-4 py-3 rounded-lg text-sm font-heading font-semibold uppercase tracking-wider no-underline transition-all
-                  ${isActive(item.path)
-                    ? "text-accent bg-accent/10"
-                    : "text-light-text-secondary dark:text-dark-text-secondary hover:text-accent hover:bg-accent/5"
-                  }`}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
+      <div
+        className={`lg:hidden border-t border-light-glass-border dark:border-dark-glass-border bg-light-surface/95 dark:bg-dark-bg/95 backdrop-blur-xl
+          overflow-hidden transition-all duration-300 ease-in-out
+          ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}
+      >
+        <div className="container mx-auto px-4 py-3 flex flex-col gap-0.5">
+          {[
+            { path: "/", label: "Home" },
+            { path: "/expertise", label: "Expertise" },
+            { path: "/about", label: "About" },
+            { path: "/blogs", label: "Blogs" },
+            { path: "/contact", label: "Contact" },
+          ].map((item) => (
+            <Link
+              key={item.path}
+              to={item.path}
+              onClick={closeMenu}
+              className={`px-4 py-3.5 rounded-lg text-sm font-heading font-semibold uppercase tracking-wider transition-all
+                ${isActive(item.path)
+                  ? "!text-accent bg-accent/10"
+                  : "!text-light-text-secondary dark:!text-dark-text-secondary hover:!text-accent hover:bg-accent/5 active:bg-accent/10"
+                }`}
+            >
+              {item.label}
+            </Link>
+          ))}
         </div>
-      )}
+      </div>
     </nav>
   );
 }

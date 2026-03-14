@@ -25,19 +25,19 @@ export default function Blogs() {
   }
 
   return (
-    <section className="py-20 md:py-28 min-h-screen bg-light-bg dark:bg-dark-bg">
-      <div className="container mx-auto px-4 md:px-8 pt-16">
-        <div className="text-center mb-8 animate-fade-in-up">
-          <h2 className="text-3xl md:text-4xl font-heading font-extrabold uppercase text-light-text dark:text-dark-text mb-2">
+    <section className="py-16 sm:py-20 md:py-28 min-h-screen bg-light-bg dark:bg-dark-bg">
+      <div className="container mx-auto px-5 sm:px-6 md:px-8 pt-16">
+        <div className="text-center mb-6 sm:mb-8 animate-fade-in-up">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-extrabold uppercase text-light-text dark:text-dark-text mb-2">
             Blogs
           </h2>
-          <p className="text-light-text-secondary dark:text-dark-text-secondary italic">
+          <p className="text-light-text-secondary dark:text-dark-text-secondary italic text-sm sm:text-base">
             Thoughts, tutorials, and interview prep
           </p>
         </div>
 
         {/* Tags */}
-        <div className="text-center mb-10 flex flex-wrap justify-center gap-2 animate-fade-in-up delay-1">
+        <div className="text-center mb-8 sm:mb-10 flex flex-wrap justify-center gap-2 animate-fade-in-up delay-1">
           {filteredBlogs?.tags?.map((tag: any, i: number) => (
             <button
               key={i}
@@ -45,7 +45,7 @@ export default function Blogs() {
                 filterByTag(tag);
                 document.getElementById("questions")?.scrollIntoView({ behavior: "smooth" });
               }}
-              className={`px-5 py-2 rounded-full text-sm font-heading font-semibold cursor-pointer
+              className={`px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-heading font-semibold cursor-pointer
                 border transition-all duration-200
                 ${activeTag === tag
                   ? "bg-accent/15 border-accent text-accent -translate-y-0.5"
@@ -60,11 +60,11 @@ export default function Blogs() {
         {/* Blog Cards */}
         <div id="questions">
           {filteredBlogs?.blogs?.length > 0 ? (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
               {filteredBlogs.blogs.map((blg: any, index: number) => (
                 <div
                   key={index}
-                  className={`p-6 rounded-2xl flex flex-col animate-fade-in-up delay-${(index % 6) + 1}
+                  className={`p-5 sm:p-6 rounded-2xl flex flex-col animate-fade-in-up delay-${(index % 6) + 1}
                     bg-light-surface dark:bg-dark-glass
                     border border-light-glass-border dark:border-dark-glass-border
                     shadow-[0_4px_20px_rgba(0,0,0,0.04)] dark:shadow-none
@@ -72,11 +72,11 @@ export default function Blogs() {
                     hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] dark:hover:shadow-[0_12px_40px_rgba(0,0,0,0.3)]
                     transition-all duration-500`}
                 >
-                  <h5 className="font-heading font-bold text-lg text-light-text dark:text-dark-text mb-3">
+                  <h5 className="font-heading font-bold text-base sm:text-lg text-light-text dark:text-dark-text mb-2 sm:mb-3">
                     {blg?.title}
                   </h5>
                   {blg?.shortDesc && (
-                    <p className="text-light-text-secondary dark:text-dark-text-secondary text-sm leading-relaxed flex-grow mb-4">
+                    <p className="text-light-text-secondary dark:text-dark-text-secondary text-xs sm:text-sm leading-relaxed flex-grow mb-3 sm:mb-4">
                       {blg.shortDesc}
                     </p>
                   )}

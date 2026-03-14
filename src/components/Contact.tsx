@@ -18,7 +18,7 @@ export default function Contact() {
     clearForm();
   };
 
-  const inputClasses = `w-full px-5 py-4 rounded-xl font-body transition-all duration-200
+  const inputClasses = `w-full px-4 sm:px-5 py-3.5 sm:py-4 rounded-xl font-body transition-all duration-200 text-sm sm:text-base
     bg-light-glass dark:bg-dark-glass
     border border-light-glass-border dark:border-dark-glass-border
     text-light-text dark:text-dark-text
@@ -28,28 +28,28 @@ export default function Contact() {
 
   return (
     <section
-      className="py-20 md:py-28 border-t border-light-glass-border dark:border-dark-glass-border
+      className="py-16 sm:py-20 md:py-28 border-t border-light-glass-border dark:border-dark-glass-border
         bg-light-bg dark:bg-dark-surface"
     >
-      <div className="container mx-auto px-4 md:px-8 max-w-4xl">
-        <div className="text-center mb-10 animate-fade-in-up">
-          <h2 className="text-3xl md:text-4xl font-heading font-extrabold uppercase text-light-text dark:text-dark-text mb-2">
+      <div className="container mx-auto px-5 sm:px-6 md:px-8 max-w-4xl">
+        <div className="text-center mb-8 sm:mb-10 animate-fade-in-up">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-extrabold uppercase text-light-text dark:!text-white mb-2">
             Get In Touch
           </h2>
-          <p className="text-light-text-secondary dark:text-dark-text-secondary italic">
+          <p className="text-light-text-secondary dark:text-dark-text-secondary italic text-sm sm:text-base">
             Have a question or want to work together? Drop me a message.
           </p>
         </div>
 
         <form onSubmit={handleSubmit} className="animate-fade-in-up delay-2">
-          <div className="grid md:grid-cols-2 gap-5 mb-5">
-            <div className="flex flex-col gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 mb-4 sm:mb-5">
+            <div className="flex flex-col gap-4 sm:gap-5">
               <input className={inputClasses} id="name" type="text" placeholder="Your Name *" value={form.name} onChange={handleChange} required />
               <input className={inputClasses} id="email" type="email" placeholder="Your Email *" value={form.email} onChange={handleChange} required />
               <input className={inputClasses} id="phone" type="tel" placeholder="Your Phone *" value={form.phone} onChange={handleChange} required />
             </div>
             <textarea
-              className={`${inputClasses} min-h-[180px] md:min-h-full resize-vertical`}
+              className={`${inputClasses} min-h-[160px] sm:min-h-[180px] md:min-h-full resize-vertical`}
               id="message" placeholder="Your Message *" value={form.message} onChange={handleChange} required
             />
           </div>
@@ -57,9 +57,10 @@ export default function Contact() {
           <div className="text-center">
             <button
               type="submit"
-              className="px-10 py-4 rounded-full font-heading font-bold text-sm uppercase tracking-wider cursor-pointer
-                bg-gradient-to-r from-accent to-accent-purple text-dark-bg
-                hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(0,212,170,0.25)]
+              className="w-full sm:w-auto px-10 py-3.5 sm:py-4 rounded-full font-heading font-bold text-sm uppercase tracking-wider cursor-pointer
+                bg-accent text-dark-bg
+                hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(0,212,170,0.25)] hover:bg-accent-light
+                active:scale-95
                 transition-all duration-500"
             >
               Send Message
