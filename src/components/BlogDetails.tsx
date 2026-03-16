@@ -29,7 +29,7 @@ export default function BlogDetails() {
               <i className="fas fa-arrow-left mr-2" />
               Back to Blogs
             </Link>
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-heading font-bold text-light-text dark:text-dark-text mt-2 mb-4">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-heading font-bold text-light-text dark:!text-white mt-2 mb-4">
               {filteredBlog?.title}
             </h2>
           </div>
