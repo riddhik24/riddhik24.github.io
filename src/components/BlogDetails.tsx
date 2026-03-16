@@ -14,7 +14,7 @@ export default function BlogDetails() {
 
   return (
     <section className="py-16 sm:py-20 md:py-28 min-h-screen bg-light-bg dark:bg-dark-bg">
-      <div className="container mx-auto px-4 sm:px-6 md:px-8 pt-16 max-w-4xl">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-4xl">
         <div
           className="rounded-2xl animate-fade-in-up
             bg-light-surface dark:bg-dark-glass

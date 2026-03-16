@@ -29,7 +29,7 @@ const skills = [
 export default function Expertise() {
   return (
     <section
-      className="py-16 sm:py-20 md:py-28 border-t border-light-glass-border dark:border-dark-glass-border
+      className="py-16 sm:py-20 md:py-16 border-t border-light-glass-border dark:border-dark-glass-border
         bg-light-bg dark:bg-dark-bg"
     >
       <div className="container mx-auto px-5 sm:px-6 md:px-8">

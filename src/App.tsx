@@ -4,6 +4,7 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import Nav from "./components/Nav";
+import ScrollToTop from "./components/ScrollToTop";
 import BlogProvider from "./components/BlogContext";
 import ThemeProvider from "./components/ThemeContext";
 import { HashRouter, Route, Routes } from "react-router-dom";
@@ -24,6 +25,8 @@ export default function App() {
         >
           <HashRouter>
             <Nav />
+            <ScrollToTop />
+            <main className="pt-16">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
@@ -32,6 +35,7 @@ export default function App() {
               <Route path="/blogs" element={<Blogs />} />
               <Route path="/blogdetail/:path" element={<BlogDetails />} />
             </Routes>
+            </main>
           </HashRouter>
           <Footer />
         </Suspense>

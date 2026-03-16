@@ -26,7 +26,7 @@ export default function Blogs() {
 
   return (
     <section className="py-16 sm:py-20 md:py-28 min-h-screen bg-light-bg dark:bg-dark-bg">
-      <div className="container mx-auto px-5 sm:px-6 md:px-8 pt-16">
+      <div className="container mx-auto px-5 sm:px-6 md:px-8">
         <div className="text-center mb-6 sm:mb-8 animate-fade-in-up">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-extrabold uppercase text-light-text dark:text-dark-text mb-2">
             Blogs
