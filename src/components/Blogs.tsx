@@ -28,7 +28,7 @@ export default function Blogs() {
     <section className="py-16 sm:py-20 md:py-28 min-h-screen bg-light-bg dark:bg-dark-bg">
       <div className="container mx-auto px-5 sm:px-6 md:px-8">
         <div className="text-center mb-6 sm:mb-8 animate-fade-in-up">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-extrabold uppercase text-light-text dark:text-dark-text mb-2">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-extrabold uppercase text-light-text dark:!text-white mb-2">
             Blogs
           </h2>
           <p className="text-light-text-secondary dark:text-dark-text-secondary italic text-sm sm:text-base">
@@ -72,7 +72,7 @@ export default function Blogs() {
                     hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] dark:hover:shadow-[0_12px_40px_rgba(0,0,0,0.3)]
                     transition-all duration-500`}
                 >
-                  <h5 className="font-heading font-bold text-base sm:text-lg text-light-text dark:text-dark-text mb-2 sm:mb-3">
+                  <h5 className="font-heading font-bold text-base sm:text-lg text-light-text dark:!text-white mb-2 sm:mb-3">
                     {blg?.title}
                   </h5>
                   {blg?.shortDesc && (
